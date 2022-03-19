@@ -190,6 +190,7 @@ let load_status=client.initialize();
             client.sendMessage(id,msg);
             }
         });
+        console.log("bulk message get completed");
 
        
 
@@ -221,8 +222,8 @@ let load_status=client.initialize();
         
        
         let reply_txt=trigger_table.get(msg);
-    
-        message.reply(reply_txt);
+        if(reply_txt)
+            message.reply(reply_txt);
         console.log("Server will keep listening upcoming text to automate replies: ");
 
 
